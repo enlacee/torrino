@@ -1,0 +1,23 @@
+$nav-top-h: 45px;
+
+.nav-top{
+
+	@include maxw(md){
+		height: $nav-top-h;
+		box-shadow: 0 2px 2px rgba(#000, 0.2);
+	}
+
+	&__social{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		color: black;
+
+		ul {
+			list-style: none;
+			li {
+				display: inline;
+			}
+		}
+	}
+}

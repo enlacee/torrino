@@ -18,7 +18,7 @@ module.exports = {
         notify: true,
         open: true,
         port: 3000,
-        proxy: 'local.classicwhite.com'
+        proxy: 'local.torrino.com'
     },
 
     images: {
