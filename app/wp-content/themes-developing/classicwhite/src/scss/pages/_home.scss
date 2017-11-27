@@ -1,0 +1,88 @@
+
+.home {
+	h2{
+		font-size: 1.9em;
+		font-weight: bold;
+	}
+}
+
+.section-home{
+	&-baners{
+		.container{
+			height: auto;
+			border:1px solid blue;
+		}
+	}
+	&-products{
+		.slider-product{
+			.slick-dots{
+				li.slick-active button:before {
+					// color: #BDBDBD;
+				}
+				li button:before {
+					font-size: 1rem;
+				}
+			}
+		}
+	}
+}
+
+.card-product{
+	display: block;
+	max-width: 280px;
+	border: 1px solid #C5C5C5;
+	padding: 1.2em;
+	margin: 0 auto;
+}
+
+.footer{
+	h3{
+		font-size: 1.5em;
+		font-weight: bold;
+	}
+	h4{
+		font-size: 1.3em;
+		font-weight: bold;
+	}
+	&__contact{
+		.row{
+			.col-12{
+				min-height: 12em;
+				border: 1px solid black;
+			}
+		}
+		&__whatsapp{
+
+		}
+		&__whatsapp-ico{
+			font-size: 2em;
+			color: #424242;
+		}
+		&__whatsapp-number{
+			background-color: #bdbdbd;
+		}
+	}
+	&__content-black{
+		background-color: black;
+		color: white;
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+	}
+	&__social-icons{
+		ul li a {
+			width: 4.5em;
+			height: 4.5em;
+			border-radius: 50%;
+			border: 0.3em solid white;
+			color: white;
+			text-decoration: none;
+			margin-left: 0.4em;
+			@include maxw(xs){
+				font-size: 0.7em;
+			}
+		}
+	}
+}

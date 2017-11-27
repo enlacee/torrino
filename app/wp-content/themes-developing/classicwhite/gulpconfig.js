@@ -53,8 +53,9 @@ module.exports = {
                 src + 'js/functions.js'
             ],
             plugins: [
-                dev + 'jquery/dist/jquery.js',
-                dev + 'boostrap/dist/js/bootstrap.js'
+                dev + 'slick-carousel/slick/slick.js',
+                // dev + 'jquery/dist/jquery.js',
+                dev + 'boostrap/dist/js/bootstrap.js',
             ]
         },
         dest: build + 'js/',

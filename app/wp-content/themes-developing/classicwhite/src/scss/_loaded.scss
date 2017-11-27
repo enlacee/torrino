@@ -22,6 +22,8 @@ Text Domain: #{$theme-text-domain}
 @import "node_modules/bootstrap/scss/bootstrap";
 
 // slick
+@import "node_modules/slick-carousel/slick/slick.scss";
+@import "node_modules/slick-carousel/slick/slick-theme.scss";
 
 // end load plugins
 

@@ -16,8 +16,8 @@ $imgs: './img/cssimgs/';
 
 // Define colors
 // ------------------------------------------------
-$brand-primary: #330066;
-$brand-second: #000;
+$brand-primary: #000;
+$brand-second: #0078b9;
 $body-color: #000;
 
 // Fonts
@@ -40,4 +40,9 @@ $font-family-base: sans-serif;
 $breadcrumb-padding-x: 2px;
 $breadcrumb-bg: transparent;
 $breadcrumb-divider: "\203A";
+
+// Customize vars plugins
+
+$slick-font-path: "./fonts/slick/";
+$slick-loader-path: "./img/slick/";
 
