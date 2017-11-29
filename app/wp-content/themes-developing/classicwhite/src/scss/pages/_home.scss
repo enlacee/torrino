@@ -1,5 +1,5 @@
 
-.home {
+.home{
 	h2{
 		font-size: 1.9em;
 		font-weight: bold;
@@ -31,8 +31,25 @@
 	display: block;
 	max-width: 280px;
 	border: 1px solid #C5C5C5;
-	padding: 1.2em;
-	margin: 0 auto;
+	padding: 20px;
+	margin: 1px;
+}
+
+.card-page{
+	display: block;
+	max-width: 280px;
+	padding: 20px;
+	margin-right: 25px;
+	margin-top: 5px;
+	background-color:gray;
+
+	@include maxw(md){
+		margin-right: 5px;
+	}
+
+	h3{
+		font-size: 1em;
+	}
 }
 
 .footer{
