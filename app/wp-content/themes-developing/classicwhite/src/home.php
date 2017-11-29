@@ -70,7 +70,7 @@
 	<section class="section-home-products">
 		<div class="container">
 			<div class="d-flex justify-content-center mt-4 mb-2">
-				<div class="w-75 text-center my-4">
+				<div class="w-75 text-center mt-4 mb-5">
 					<h2>TENEMOS MÁS DE 10 AÑOS LLEVANDO PRODUCTOS DELICIOSOS A TU HOGAR</h2>
 				</div>
 			</div>
@@ -96,7 +96,7 @@
 	<section class="section-home-pages">
 		<div class="container ">
 			<div class="d-flex justify-content-center">
-				<div class="w-75 text-center my-4">
+				<div class="w-75 text-center mt-4 mb-5">
 					<h2>CONOCE MÁS SOBRE TORRINO</h2>
 				</div>
 			</div>
@@ -121,14 +121,14 @@
 	<div class="footer__contact">
 		<div class="container">
 			<div class="d-flex justify-content-center">
-				<div class="w-75 text-center my-4">
+				<div class="w-75 text-center mt-5">
 					<h2>!ENCUÉNTRANOS E EL WHAT'S UP!</h2>
 				</div>
 			</div>
-			<div class="row footer__contact__whatsapp my-5">
+			<div class="row footer__contact__whatsapp">
 				<div class="col-12 col-sm-8 col-md-6  d-flex justify-content-center align-items-center">
 					<div>
-						<p class="h1 px-2 py-2 mx-3 footer__contact__whatsapp-number">956 000 000</p>
+						<p class="h1 px-2 py-2 mx-3 footer__contact__whatsapp-number text-center">956 000 000</p>
 					</div>
 					<div class="footer__contact__whatsapp-ico align-self-start">
 						<i class="icon-whatsapp is-lg"></i>

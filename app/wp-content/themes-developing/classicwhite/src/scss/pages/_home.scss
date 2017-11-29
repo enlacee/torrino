@@ -16,6 +16,8 @@
 	&-products{
 		.slider-product{
 			.slick-dots{
+				margin-top: 1.8em;
+				position: relative;
 				li.slick-active button:before {
 					// color: #BDBDBD;
 				}
@@ -53,6 +55,7 @@
 }
 
 .footer{
+	margin-top: 4.8em;
 	h3{
 		font-size: 1.5em;
 		font-weight: bold;
@@ -63,13 +66,15 @@
 	}
 	&__contact{
 		.row{
+			border-top: 1px solid black;
 			.col-12{
 				min-height: 12em;
-				border: 1px solid black;
 			}
 		}
 		&__whatsapp{
-
+			margin-top: 5.2em;
+			padding-top:5em;
+			padding-bottom:5em;
 		}
 		&__whatsapp-ico{
 			font-size: 2em;
