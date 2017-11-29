@@ -138,23 +138,24 @@
 					<img src="<?php echo get_stylesheet_directory_uri() . '/img/logo-face.png' ?>" alt="logo">
 				</div>
 			</div>
-			<div class="row py-5 footer__content-black">
+			<div class="row footer__content-black">
 				<div class="col-md-6">
 					<h4>CONTACTO</h4>
 					<ul>
 						<li>
-							<i class="icon-phone"></i> (01)618 6309
+							<i class="icon-phone"></i>&nbsp;&nbsp;(01)618 6309
 						</li>
 						<li>
-							<i class="icon-location-arrow"></i> Av. francisco Bolognesi 551.
+							<i class="icon-location-arrow"></i>&nbsp;&nbsp;Av. francisco Bolognesi 551.
+							<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Santa Anita - Lima
 						</li>
 						<li>
-							<i class="icon-envelope"></i> atencionalcliente@productosunion.pe
+							<i class="icon-envelope"></i>&nbsp;&nbsp;atencionalcliente@productosunion.pe
 						</li>
 					</ul>
 				</div>
 				<div class="col-md-6 footer__social-icons">
-					<h3>SÍGUENOS</h3>
+					<h3 class="mb-3">SÍGUENOS</h3>
 					<ul>
 						<li class="d-flex justify-content-left flex-wrap">
 							<a href="#" class="d-flex justify-content-center align-items-center">
