@@ -6,7 +6,7 @@ get_header(); ?>
 		<div class="container">
 
 			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'content', 'page' ); ?>
+				<?php get_template_part( 'template-parts/page' ); ?>
 				<?php //comments_template( '', true ); ?>
 			<?php endwhile; // end of the loop. ?>
 

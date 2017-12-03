@@ -30,4 +30,4 @@
 </head>
 
 <body <?php body_class(); ?> >
-<?php include __DIR__.'/header-simple.php'; ?>
+<?php get_template_part('nav') ?>

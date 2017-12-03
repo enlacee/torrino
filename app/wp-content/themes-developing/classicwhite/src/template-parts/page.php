@@ -41,6 +41,7 @@
 			</div>
 		</div>
 
+<?php if (false) : ?>
 		<div class="row margin-bottom-60">
 			<div class="col-md-8">
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -57,5 +58,5 @@
 				<?php get_sidebar() ?>
 			</div>
 		</div>
-
+<?php endif; ?>
 <?php endif; ?>
