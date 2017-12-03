@@ -10,7 +10,6 @@
 	&-baners{
 		.container{
 			height: auto;
-			border:1px solid blue;
 		}
 	}
 	&-products{
@@ -43,19 +42,18 @@
 	padding: 20px;
 	margin-right: 25px;
 	margin-top: 5px;
-	background-color:gray;
 
 	@include maxw(md){
 		margin-right: 5px;
 	}
-
 	h3{
 		font-size: 1em;
 	}
 }
 
 .footer{
-	margin-top: 4.8em;
+	margin: 4.8em 0 0 0;
+	padding: 0;
 	h3{
 		font-size: 1.5em;
 		font-weight: bold;
@@ -64,27 +62,19 @@
 		font-size: 1.3em;
 		font-weight: bold;
 	}
-	&__contact{
-		.row{
-			border-top: 1px solid black;
-			.col-12{
-				min-height: 12em;
-			}
-		}
-		&__whatsapp{
-			margin-top: 5.2em;
-			padding-top:5em;
-			padding-bottom:5em;
-		}
-		&__whatsapp-ico{
+	&__body{
+		margin-top: 5.2em;
+		padding-top:5em;
+		padding-bottom:5em;
+		.whatsapp-ico{
 			font-size: 2em;
 			color: #424242;
 		}
-		&__whatsapp-number{
+		.whatsapp-number{
 			background-color: #bdbdbd;
 		}
 	}
-	&__content-black{
+	&__footer{
 		background-color: black;
 		color: white;
 		padding: 2.8em 0em 2.8em 7.5em;
@@ -100,19 +90,19 @@
 				margin: 0.2em;
 			}
 		}
-	}
-	&__social-icons{
-		ul li a {
-			width: 4.2em;
-			height: 4.2em;
-			border-radius: 50%;
-			border: 0.3em solid white;
-			color: white;
-			text-decoration: none;
-			margin-left: 0.45em;
-			font-size: 0.8em;
-			@include maxw(xs){
-				font-size: 0.7em;
+		.social-icons{
+			ul li a {
+				width: 4.2em;
+				height: 4.2em;
+				border-radius: 50%;
+				border: 0.3em solid white;
+				color: white;
+				text-decoration: none;
+				margin-left: 0.45em;
+				font-size: 0.8em;
+				@include maxw(xs){
+					font-size: 0.7em;
+				}
 			}
 		}
 	}

@@ -30,3 +30,4 @@
 </head>
 
 <body <?php body_class(); ?> >
+<?php include __DIR__.'/header-simple.php'; ?>

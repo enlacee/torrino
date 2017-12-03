@@ -2,7 +2,6 @@
 
 var gulp          = require('gulp')
   , plumber       = require('gulp-plumber')
-  , gcmq          = require('gulp-group-css-media-queries')
   , gutil         = require('gulp-util')
   , plugins       = require('gulp-load-plugins')({ camelize: true })
   , config        = require('../../gulpconfig').styles
@@ -33,7 +32,6 @@ gulp.task('styles-libsass', function() {
   .pipe(plumber())
   .pipe(plugins.sourcemaps.init())
   .pipe(plugins.sass(config.libsass))
-  .pipe(gcmq())
   .pipe(plugins.postcss(processors))
   .pipe(plugins.cssnano(config.minify))
   .pipe(plugins.sourcemaps.write('./')) // Writes an external sourcemap
