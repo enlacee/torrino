@@ -2,7 +2,7 @@
 		<div class="">
 
 			<!-- <div class="d-flex justify-content-center"> -->
-			<div class="container">
+			<div class="container" style="/*min-height:60vh;background-color: orange*/">
 				<div class="row footer__head">
 					<div class="col-12 w-75_ text-center mt-5">
 						<h2>!ENCUÉNTRANOS E EL WHAT'S UP!</h2>
@@ -24,7 +24,7 @@
 				</div>
 			</div>
 
-			<div class="footer__footer">
+			<div class="footer__footer" style="/*min-height: 40vh;*/">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-6">

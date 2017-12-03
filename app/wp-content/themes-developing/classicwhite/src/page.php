@@ -3,7 +3,7 @@
 get_header(); ?>
 
 	<div class="wrapper-container">
-		<div class="page container color-bg-white ">
+		<div class="container">
 
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'content', 'page' ); ?>
