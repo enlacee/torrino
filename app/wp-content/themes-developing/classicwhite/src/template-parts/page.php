@@ -35,16 +35,8 @@
 
 <?php else : ?>
 
-		<div class="row_">
-			<div class="col-12 d-flex justify-content-center align-items-center mb-4 subtitle-bg">
-				<div class="layer-image" style="background-image:url('<?php echo get_template_directory_uri(); ?>/img/design/3.png');"></div>
-				<div class="layer-apha"></div>
-				<div class="d-block title">
-					<h1 class="color-text-blue"><?php the_title(); ?><span class="line"></span></h1>
-					<p class="d-block">conoce nuestra empresa</p>
-
-				</div>
-			</div>
+		<div class="row">
+			<?php get_template_part( 'template-parts/header-page' ); ?>
 		</div>
 
 		<div class="row">

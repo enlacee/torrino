@@ -1,3 +1,28 @@
+<?php
+/**
+ * Print menu
+ */
+$locations = get_nav_menu_locations();
+$theMenu = isset($locations['menu-primary']) ? wp_get_nav_menu_items($locations['menu-primary']) : false;
+$theMenuSlice = false;
+$limitMenu = 4;
+$currentPostId = false;
+
+if ($theMenu !== false) {
+	$currentMenuSelected = current(wp_filter_object_list($theMenu, array('object_id' => get_queried_object_id())));
+	$currentPostId = isset($currentMenuSelected->ID) ? $currentMenuSelected->ID : false;
+	$theMenuSlice = array_slice($theMenu, 0, $limitMenu);
+}
+
+function cw_menuIsActive($postObject, $postID){
+	$rs = '';
+	if ($postObject->ID === $postID) {
+		$rs = 'active';
+	}
+
+	return $rs;
+}
+?>
 <header>
 	<div class="nav-top my-2">
 		<div class="container">
@@ -24,16 +49,19 @@
 			<div>
 				<div class="d-flex_ d-sm-flex justify-content-between align-items-center no-gutters">
 					<div class="col-md-5 col-xs-12">
-						<nav class="nav-menu">
-							<ul class="navbar-nav mr-auto_ w-100 d-flex justify-content-center flex-row">
-								<li class="nav-item active">
-									<a href="#">NOSTROS</a>
-								</li>
-								<li class="nav-item">
-									<a href="#">PRODUCTOS</a>
-								</li>
-							</ul>
-						</nav>
+						<?php if (is_array($theMenuSlice) && count($theMenuSlice) > 0) : ?>
+							<?php $partMenu = array_slice($theMenuSlice, 0, $limitMenu/2); ?>
+								<nav class="nav-menu">
+									<ul class="navbar-nav w-100 d-flex justify-content-center flex-row">
+										<?php foreach($partMenu as $theKey => $thePost) : ?>
+											<?php $target_type = !empty($thePost->target) ? $thePost->target : '_self'; ?>
+											<li class="nav-item <?php echo cw_menuIsActive($thePost, $currentPostId); ?>">
+												<a target="<?php echo $target_type; ?>" href="<?php echo $thePost->url ;?>"><?php echo $thePost->title ;?></a>
+											</li>
+										<?php endforeach; ?>
+									</ul>
+								</nav>
+						<?php endif; ?>
 					</div>
 					<div class="col-md-2 d-none d-sm-block">
 						<a href="#">
@@ -41,16 +69,19 @@
 						</a>
 					</div>
 					<div class="col-md-5 col-xs-12">
-						<nav class="nav-menu">
-							<ul class="navbar-nav mr-auto w-100 d-flex justify-content-center flex-row">
-								<li class="nav-item active">
-									<a href="#">BLOG</a>
-								</li>
-								<li class="nav-item">
-									<a href="#">CONTACTO</a>
-								</li>
-							</ul>
-						</nav>
+						<?php if (is_array($theMenuSlice) && count($theMenuSlice) > 0) : ?>
+							<?php $partMenu = array_slice($theMenuSlice, ($limitMenu/2), ($limitMenu/2)+($limitMenu/2)); ?>
+								<nav class="nav-menu">
+									<ul class="navbar-nav w-100 d-flex justify-content-center flex-row">
+										<?php foreach($partMenu as $theKey => $thePost) : ?>
+											<?php $target_type = !empty($thePost->target) ? $thePost->target : '_self'; ?>
+											<li class="nav-item <?php echo cw_menuIsActive($thePost, $currentPostId); ?>">
+												<a target="<?php echo $target_type; ?>" href="<?php echo $thePost->url ;?>"><?php echo $thePost->title ;?></a>
+											</li>
+										<?php endforeach; ?>
+									</ul>
+								</nav>
+						<?php endif; ?>
 					</div>
 				</div>
 			</div>

@@ -17,7 +17,7 @@
 	}
 	.layer-apha, .layer-image{
 		display: block;
-		width: 100%;
+		width: 97.54%;
 		height: 100%;
 		position: absolute;
 	}
@@ -38,5 +38,11 @@
 	h2{
 		color: black;
 	}
-
+	@include maxw(xs){
+		img{
+			width: initial;
+			max-width: 100%;
+			height: auto;
+		}
+	}
 }

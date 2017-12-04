@@ -51,7 +51,7 @@ class ClassicWhite
 		register_nav_menus(
 			array(
 				'menu-primary' => __('Menú Principal', 'classicwhite-theme'),
-				'menu-footer'  => __('Menú Footer', 'classicwhite-theme')
+				// 'menu-footer'  => __('Menú Footer', 'classicwhite-theme')
 			)
 		);
 	}
@@ -81,7 +81,9 @@ class ClassicWhite
 	public function removeMetaBoxes() {
 		// post
 		remove_meta_box( 'postcustom', 'post', 'normal' );
+		remove_meta_box( 'postexcerpt', 'post', 'normal' );
 		remove_meta_box( 'commentstatusdiv', 'post', 'normal' );
+
 		// page
 		remove_meta_box( 'postcustom', 'page', 'normal' );
 		remove_meta_box( 'commentstatusdiv', 'page', 'normal' );
