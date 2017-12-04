@@ -1,7 +1,7 @@
 <header>
-	<div class="nav-top">
+	<div class="nav-top my-2">
 		<div class="container">
-			<nav class="nav-top__social hidden-sm-down mt-2">
+			<nav class="nav-top__social hidden-sm-down">
 				<ul>
 					<li>
 						<a href="#">

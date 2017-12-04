@@ -2,7 +2,7 @@
 <div class="wrapper-container">
 	<!-- body -->
 	<main class="home">
-		<section class="section-home-baners my-2">
+		<section class="section-home-baners">
 			<div class="container">
 				<?php echo do_shortcode( '[rev_slider alias="thehome"]' ); ?>
 			</div>
