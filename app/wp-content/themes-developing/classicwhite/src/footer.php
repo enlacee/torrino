@@ -44,23 +44,40 @@
 						</div>
 						<div class="col-md-6 social-icons">
 							<h3 class="mb-3">SÍGUENOS</h3>
+							<?php
+								$rrssFB = get_theme_mod( 'url_field_facebook' );
+								$rrssTW = get_theme_mod( 'url_field_twitter' );
+								$rrssPT = get_theme_mod( 'url_field_pinterest' );
+								$rrssYT = get_theme_mod( 'url_field_youtube' );
+								$rrssLK = get_theme_mod( 'url_field_linkedin' );
+							?>
 							<ul>
 								<li class="d-flex justify-content-left flex-wrap">
-									<a href="#" class="d-flex justify-content-center align-items-center">
-										<i class="icon-facebook is-lg"></i>
-									</a>
-									<a href="#" class="d-flex justify-content-center align-items-center">
-										<i class="icon-twitter is-lg"></i>
-									</a>
-									<a href="#" class="d-flex justify-content-center align-items-center">
-										<i class="icon-instagram is-lg"></i>
-									</a>
-									<a href="#" class="d-flex justify-content-center align-items-center">
-										<i class="icon-youtube is-lg"></i>
-									</a>
-									<a href="#" class="d-flex justify-content-center align-items-center">
-										<i class="icon-linkedin is-lg"></i>
-									</a>
+									<?php if (!empty($rrssFB)) : ?>
+										<a href="<?php echo $rrssFB ?>" class="d-flex justify-content-center align-items-center">
+											<i class="icon-facebook is-lg"></i>
+										</a>
+									<?php endif; ?>
+									<?php if (!empty($rrssTW)) : ?>
+										<a href="<?php echo $rrssTW ?>" class="d-flex justify-content-center align-items-center">
+											<i class="icon-twitter is-lg"></i>
+										</a>
+									<?php endif; ?>
+									<?php if (!empty($rrssPT)) : ?>
+										<a href="<?php echo $rrssPT ?>" class="d-flex justify-content-center align-items-center">
+											<i class="icon-instagram is-lg"></i>
+										</a>
+									<?php endif; ?>
+									<?php if (!empty($rrssYT)) : ?>
+										<a href="<?php echo $rrssYT ?>" class="d-flex justify-content-center align-items-center">
+											<i class="icon-youtube is-lg"></i>
+										</a>
+									<?php endif; ?>
+									<?php if (!empty($rrssLK)) : ?>
+										<a href="<?php echo $rrssLK ?>" class="d-flex justify-content-center align-items-center">
+											<i class="icon-linkedin is-lg"></i>
+										</a>
+									<?php endif; ?>
 								</li>
 							</ul>
 						</div>
