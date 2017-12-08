@@ -22,6 +22,10 @@ $nav-top-h: 45px;
 
 .nav-menu{
 	ul {
+		li.nav-item {
+			min-width: 13.75em;
+			text-align: center;
+		}
 		li a {
 			font-size: 1.3em;
 			// font-weight: bold;

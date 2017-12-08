@@ -27,22 +27,49 @@ function cw_menuIsActive($postObject, $postID){
 	<div class="nav-top my-2">
 		<div class="container">
 			<nav class="nav-top__social hidden-sm-down">
+				<?php
+					$rrssFB = get_theme_mod( 'url_field_facebook' );
+					$rrssTW = get_theme_mod( 'url_field_twitter' );
+					$rrssPT = get_theme_mod( 'url_field_pinterest' );
+					$rrssYT = get_theme_mod( 'url_field_youtube' );
+					$rrssLK = get_theme_mod( 'url_field_linkedin' );
+				?>
 				<ul>
-					<li>
-						<a href="#">
-							<i class="icon-facebook is-md"></i>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<i class="icon-youtube is-md"></i>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<i class="icon-instagram is-md"></i>
-						</a>
-					</li>
+					<?php if (!empty($rrssFB)) : ?>
+						<li>
+							<a href="<?php echo $rrssFB ?>">
+								<i class="icon-facebook is-md"></i>
+							</a>
+						</li>
+					<?php endif; ?>
+					<?php if (!empty($rrssTW)) : ?>
+						<li>
+							<a href="<?php echo $rrssTW ?>">
+								<i class="icon-twitter is-md"></i>
+							</a>
+						</li>
+					<?php endif; ?>
+					<?php if (!empty($rrssPT)) : ?>
+						<li>
+							<a href="<?php echo $rrssPT ?>">
+								<i class="icon-instagram is-md"></i>
+							</a>
+						</li>
+					<?php endif; ?>
+					<?php if (!empty($rrssYT)) : ?>
+						<li>
+							<a href="<?php echo $rrssYT ?>">
+								<i class="icon-youtube is-md"></i>
+							</a>
+						</li>
+					<?php endif; ?>
+					<?php if (!empty($rrssLK)) : ?>
+						<li>
+							<a href="<?php echo $rrssLK ?>">
+								<i class="icon-linkedin is-md"></i>
+							</a>
+						</li>
+					<?php endif; ?>
 				</ul>
 			</nav>
 
@@ -64,8 +91,8 @@ function cw_menuIsActive($postObject, $postID){
 						<?php endif; ?>
 					</div>
 					<div class="col-md-2 d-none d-sm-block">
-						<a href="#">
-							<img class="w-100" src="<?php echo get_stylesheet_directory_uri() . '/img/logo.png' ?>" alt=""/>
+						<a href="<?php echo esc_url( home_url() ); ?>">
+							<img class="w-100" src="<?php echo get_stylesheet_directory_uri() . '/img/logo.png' ?>" alt="torrino logo"/>
 						</a>
 					</div>
 					<div class="col-md-5 col-xs-12">
