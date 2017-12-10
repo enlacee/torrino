@@ -4,12 +4,17 @@ class ClassicWhite
 {
 
 //	private $navHeadAction;
+	private $myWidget;
+	private $homeAction;
+
+	const PREFIX = 'classicwhite';
 
 	public function __construct()
 	{
 		$this->init();
 		$this->postTypes();
 		$this->actions();
+		$this->widgets();
 		$this->hideAdminBar();
 		$this->addImagesSizes();
 
@@ -19,8 +24,6 @@ class ClassicWhite
 	public function init()
 	{
 		add_action('init', [$this, 'themeRegisterMenus']);
-		add_action('widgets_init', [$this, 'themeLoadSidebars']);
-		add_action('widgets_init', [$this, 'themeLoadWidgets']);
 		add_filter('upload_mimes', [$this, 'setMimeTypes']);
 
 		add_action('admin_menu', [$this, 'removeMetaBoxes']);
@@ -41,6 +44,14 @@ class ClassicWhite
 	public function actions()
 	{
 //        $this->navHeadAction = new NavHeadAction();
+		$this->homeAction = new HomeAction(); // create metaboxes
+	}
+
+	/**
+	 * Register SideBar & Widgets
+	 */
+	public function widgets() {
+		$this->myWidget = new MyWidget();
 	}
 
 	/**
@@ -95,26 +106,6 @@ class ClassicWhite
 	public function removeRevolutionSliderMetaBoxes() {
 		remove_meta_box( 'mymetabox_revslider_0', 'page', 'normal' );
 		remove_meta_box( 'mymetabox_revslider_0', 'post', 'normal' );
-	}
-
-	/**
-	 * Register Widgets
-	 */
-	public function themeLoadSidebars()
-	{
-//        register_sidebar(array(
-//            'name'          => __('Catálogos de Marcas', 'lbel'),
-//            'id'            => 'lbel-catalog-brands',
-//            'description'   => __('', 'lbel'),
-//            'before_widget' => '',
-//            'after_widget'  => '',
-//            'before_title'  => '<h3 class="promoapp-title upper">',
-//            'after_title'   => '</h3>',
-//        ));
-	}
-
-	public function themeLoadWidgets() {
-//        register_widget( 'LbelBrandsCatalogWidget' );
 	}
 
 	/**

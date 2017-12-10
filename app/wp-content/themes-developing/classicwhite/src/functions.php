@@ -19,10 +19,12 @@ require_once trailingslashit(get_stylesheet_directory()) . 'inc/assets.php';
 //require_once trailingslashit(get_stylesheet_directory()) . 'inc/geoip/GeoIP.php';
 
 // Required class Actions
-//require_once trailingslashit(get_stylesheet_directory()) . 'inc/actions/NavHeadAction.php';
+require_once trailingslashit(get_stylesheet_directory()) . 'inc/actions/HomeAction.php';
 
 // Required class Widgets
-//require_once trailingslashit(get_stylesheet_directory()) . 'inc/widgets/MyWidget.php';
+require_once trailingslashit(get_stylesheet_directory()) . 'inc/widgets/home/class-cw-widget-home-page.php';
+require_once trailingslashit(get_stylesheet_directory()) . 'inc/widgets/home/class-cw-widget-home-product.php';
+require_once trailingslashit(get_stylesheet_directory()) . 'inc/widgets/MyWidget.php';
 
 // Required class Template
 require_once trailingslashit(get_stylesheet_directory()) . 'inc/ClassicWhite.php';
@@ -57,15 +59,15 @@ function prefix_customizer_register( $wp_customize ) {
 		'priority' => 10,
 		'capability' => 'edit_theme_options',
 		'theme_supports' => '',
-		'title' => __( 'Redes Sociales', 'textdomain' ),
-		'description' => __( 'Description of what this panel does.', 'textdomain' ),
+		'title' => __( 'Redes Sociales', 'classicwhite-theme' ),
+		'description' => __( 'Description of what this panel does.', 'classicwhite-theme' ),
 	) );
 
 	$wp_customize->add_section( 'section_id', array(
 		'priority' => 10,
 		'capability' => 'edit_theme_options',
 		'theme_supports' => '',
-		'title' => __( 'URLS', 'textdomain' ),
+		'title' => __( 'URLS', 'classicwhite-theme' ),
 		'description' => '',
 		'panel' => 'panel_id',
 	) );
@@ -82,7 +84,7 @@ function prefix_customizer_register( $wp_customize ) {
 		'type' => 'url',
 		'priority' => 10,
 		'section' => 'section_id',
-		'label' => __( 'URL Facebook', 'textdomain' ),
+		'label' => __( 'URL Facebook', 'classicwhite-theme' ),
 		'description' => '',
 	) );
 	// twitter
@@ -97,7 +99,7 @@ function prefix_customizer_register( $wp_customize ) {
 		'type' => 'url',
 		'priority' => 10,
 		'section' => 'section_id',
-		'label' => __( 'URL twitter', 'textdomain' ),
+		'label' => __( 'URL twitter', 'classicwhite-theme' ),
 		'description' => '',
 	) );
 	// pinterest
@@ -112,7 +114,7 @@ function prefix_customizer_register( $wp_customize ) {
 		'type' => 'url',
 		'priority' => 10,
 		'section' => 'section_id',
-		'label' => __( 'URL pinterest', 'textdomain' ),
+		'label' => __( 'URL pinterest', 'classicwhite-theme' ),
 		'description' => '',
 	) );
 	// youtube
@@ -127,7 +129,7 @@ function prefix_customizer_register( $wp_customize ) {
 		'type' => 'url',
 		'priority' => 10,
 		'section' => 'section_id',
-		'label' => __( 'URL youtube', 'textdomain' ),
+		'label' => __( 'URL youtube', 'classicwhite-theme' ),
 		'description' => '',
 	) );
 	// linkedin
@@ -142,9 +144,12 @@ function prefix_customizer_register( $wp_customize ) {
 		'type' => 'url',
 		'priority' => 10,
 		'section' => 'section_id',
-		'label' => __( 'URL linkedin', 'textdomain' ),
+		'label' => __( 'URL linkedin', 'classicwhite-theme' ),
 		'description' => '',
 	) );
 
 }
 add_action( 'customize_register', 'prefix_customizer_register' );
+
+// echo ABSPATH . 'wp-admin/widgets.php';Exit;
+// if ($wp_version >= 2.8) require_once(ABSPATH . 'wp-admin/widgets.php');
