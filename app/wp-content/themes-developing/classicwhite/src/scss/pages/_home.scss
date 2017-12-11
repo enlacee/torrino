@@ -31,9 +31,28 @@
 .card-product{
 	display: block;
 	max-width: 280px;
+	height: 360px;
 	border: 1px solid #C5C5C5;
 	padding: 20px;
 	margin: 1px;
+	overflow: hidden;
+}
+.card-product-image{
+	height: 238px;
+	background-color: #f7f7f7;
+	img {
+		width: 100%;
+		height: auto;
+		// vertical-align: middle;
+	}
+}
+.card-page-image{
+	height: 238px;
+	background-color: #f7f7f7;
+	img {
+		width: 100%;
+		height: auto;
+	}
 }
 
 .card-page{

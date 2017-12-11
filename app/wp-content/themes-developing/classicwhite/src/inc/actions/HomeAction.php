@@ -2,8 +2,8 @@
 
 class HomeAction {
 
-	private $keymetaPage = '_classicwhite-metabox_pageids';
-	private $keymetaProduct = '_classicwhite-metabox_productids';
+	const KEY_META_PAGE = '_classicwhite-metabox_pageids';
+	const KEY_META_PRODUCT = '_classicwhite-metabox_productids';
 
 	public function __construct()
 	{
@@ -31,7 +31,7 @@ class HomeAction {
 				foreach ( $screens as $screen ) {
 
 					add_meta_box(
-						$this->keymetaPage,
+						self::KEY_META_PAGE,
 						__( 'Páginas a mostrar', 'classicwhite-theme' ),
 						[$this, 'metaBoxPageHTML'],
 						$screen
@@ -47,11 +47,11 @@ class HomeAction {
 	 * @param WP_Post $post The object for the current post/page.
 	 */
 	public function metaBoxPageHTML( $post ) {
-		$keymetaNonce = $this->keymetaPage . '_nonce';
-		$keymetaInput1 = $this->keymetaPage . '_input1';
+		$keymetaNonce = self::KEY_META_PAGE . '_nonce';
+		$keymetaInput1 = self::KEY_META_PAGE . '_input1';
 
 		// Add an nonce field so we can check for it later.
-		wp_nonce_field( $this->keymetaPage, $keymetaNonce );
+		wp_nonce_field( self::KEY_META_PAGE, $keymetaNonce );
 
 		/*
 		 * Use get_post_meta() to retrieve an existing value
@@ -60,7 +60,7 @@ class HomeAction {
 		$value = get_post_meta( $post->ID, $keymetaInput1, true );
 
 		echo '<label for="' . $keymetaInput1 .'">';
-		_e( 'Agregar Paginas Ids:', 'classicwhite-theme' );
+		_e( 'Agregar Ids:', 'classicwhite-theme' );
 		echo '</label> ';
 		echo '<input type="text" id="' . $keymetaInput1 . '" name="' . $keymetaInput1 . '" value="' . esc_attr( $value ) . '" size="100" placeholder="424, 523, 1523" />';
 	}
@@ -72,8 +72,8 @@ class HomeAction {
 	 */
 	public function saveMetaBoxPageList( $post_id ) {
 
-		$keymetaNonce = $this->keymetaPage . '_nonce';
-		$keymetaInput1 = $this->keymetaPage . '_input1';
+		$keymetaNonce = self::KEY_META_PAGE . '_nonce';
+		$keymetaInput1 = self::KEY_META_PAGE . '_input1';
 		/*
 		 * We need to verify this came from our screen and with proper authorization,
 		 * because the save_post action can be triggered at other times.
@@ -85,7 +85,7 @@ class HomeAction {
 		}
 
 		// Verify that the nonce is valid.
-		if ( ! wp_verify_nonce( $_POST[$keymetaNonce], $this->keymetaPage ) ) {
+		if ( ! wp_verify_nonce( $_POST[$keymetaNonce], self::KEY_META_PAGE ) ) {
 			return;
 		}
 
@@ -137,7 +137,7 @@ class HomeAction {
 				foreach ( $screens as $screen ) {
 
 					add_meta_box(
-						$this->keymetaProduct,
+						self::KEY_META_PRODUCT,
 						__( 'Productos a mostrar', 'classicwhite-theme' ),
 						[$this, 'metaBoxProductsHTML'],
 						$screen
@@ -153,11 +153,11 @@ class HomeAction {
 	 * @param WP_Post $post The object for the current post/page.
 	 */
 	public function metaBoxProductsHTML( $post ) {
-		$keymetaNonce = $this->keymetaProduct . '_nonce';
-		$keymetaInput1 = $this->keymetaProduct . '_input1';
+		$keymetaNonce = self::KEY_META_PRODUCT . '_nonce';
+		$keymetaInput1 = self::KEY_META_PRODUCT . '_input1';
 
 		// Add an nonce field so we can check for it later.
-		wp_nonce_field( $this->keymetaProduct, $keymetaNonce );
+		wp_nonce_field( self::KEY_META_PRODUCT, $keymetaNonce );
 
 		/*
 		 * Use get_post_meta() to retrieve an existing value
@@ -166,7 +166,7 @@ class HomeAction {
 		$value = get_post_meta( $post->ID, $keymetaInput1, true );
 
 		echo '<label for="' . $keymetaInput1 .'">';
-		_e( 'Agregar Paginas Ids:', 'classicwhite-theme' );
+		_e( 'Agregar Ids:', 'classicwhite-theme' );
 		echo '</label> ';
 		echo '<input type="text" id="' . $keymetaInput1 . '" name="' . $keymetaInput1 . '" value="' . esc_attr( $value ) . '" size="100" placeholder="424, 523, 1523" />';
 	}
@@ -178,8 +178,8 @@ class HomeAction {
 	 */
 	public function saveMetaBoxProductList( $post_id ) {
 
-		$keymetaNonce = $this->keymetaProduct . '_nonce';
-		$keymetaInput1 = $this->keymetaProduct . '_input1';
+		$keymetaNonce = self::KEY_META_PRODUCT . '_nonce';
+		$keymetaInput1 = self::KEY_META_PRODUCT . '_input1';
 		/*
 		 * We need to verify this came from our screen and with proper authorization,
 		 * because the save_post action can be triggered at other times.
@@ -191,7 +191,7 @@ class HomeAction {
 		}
 
 		// Verify that the nonce is valid.
-		if ( ! wp_verify_nonce( $_POST[$keymetaNonce], $this->keymetaProduct ) ) {
+		if ( ! wp_verify_nonce( $_POST[$keymetaNonce], self::KEY_META_PRODUCT ) ) {
 			return;
 		}
 

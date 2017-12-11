@@ -53,13 +53,10 @@ class CW_Widget_Home_Product extends WP_Widget {
 		// before and after widget arguments are defined by themes
 		echo $args['before_widget'];
 		if ( ! empty( $title ) )
-			// echo $args['before_title'] . $title . $args['after_title'];
+			$title = $args['before_title'] . $title . $args['after_title'];
 
-			// This is where you run the code and display the output
-			// echo __( 'Hello, World!', 'classicwhite-theme' );
-			// PRINT -> section-home-products
-			require_once dirname(__FILE__) .'/class-cw-widget-home-product.html.php';
-
+		// This is where you run the code and display the output
+		require_once dirname(__FILE__) .'/class-cw-widget-home-product.html.php';
 		echo $args['after_widget'];
 	}
 

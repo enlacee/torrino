@@ -6,6 +6,7 @@ class ClassicWhite
 //	private $navHeadAction;
 	private $myWidget;
 	private $homeAction;
+	private $custom_post_type;
 
 	const PREFIX = 'classicwhite';
 
@@ -35,7 +36,7 @@ class ClassicWhite
 	 */
 	public function postTypes()
 	{
-//        $this->custom_post_type = new MyCustomPost();
+		$this->custom_post_type = new Product_Custom_Post();
 	}
 
 	/**
@@ -79,6 +80,7 @@ class ClassicWhite
 		add_image_size( 'thumbnail_380', 380 );
 		add_image_size( 'thumbnail_480', 480 );
 
+		add_image_size( 'thumbnail_238', 238 );
 	}
 
 	public function customExtraFieldsToPage() {
@@ -103,9 +105,13 @@ class ClassicWhite
 		remove_meta_box( 'authordiv' , 'page' , 'normal' );
 	}
 
+	/**
+	 * Remove metabox fron rev Slider
+	 */
 	public function removeRevolutionSliderMetaBoxes() {
 		remove_meta_box( 'mymetabox_revslider_0', 'page', 'normal' );
 		remove_meta_box( 'mymetabox_revslider_0', 'post', 'normal' );
+		remove_meta_box( 'mymetabox_revslider_0', 'producto', 'normal' );
 	}
 
 	/**

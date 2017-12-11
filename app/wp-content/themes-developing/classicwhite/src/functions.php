@@ -13,7 +13,7 @@ require_once trailingslashit(get_stylesheet_directory()) . 'functions-config-def
 require_once trailingslashit(get_stylesheet_directory()) . 'inc/assets.php';
 
 // Required class Custom Posts
-//require_once trailingslashit(get_stylesheet_directory()) . 'inc/custom_posts/MyCustomPost.php';
+require_once trailingslashit(get_stylesheet_directory()) . 'inc/custom_posts/class-product-custom-post.php';
 
 //Required Geo IP
 //require_once trailingslashit(get_stylesheet_directory()) . 'inc/geoip/GeoIP.php';
@@ -151,5 +151,46 @@ function prefix_customizer_register( $wp_customize ) {
 }
 add_action( 'customize_register', 'prefix_customizer_register' );
 
-// echo ABSPATH . 'wp-admin/widgets.php';Exit;
-// if ($wp_version >= 2.8) require_once(ABSPATH . 'wp-admin/widgets.php');
+
+/**
+ *  Helpers Views
+ */
+
+/**
+ * Limit words custom for views (cut for word)
+ *
+ * @param string $str description o content string
+ * @param int $num number to cut
+ * @param string $append_str string to concat
+ * @return string
+ */
+function limit_words( $str, $num='', $append_str='' ) {
+    $num = ($num == '') ? strlen($str) : $num;
+    $palabras = preg_split( '/[\s]+/', $str, -1, PREG_SPLIT_OFFSET_CAPTURE );
+    if( isset($palabras[$num][1]) ){
+      $str = substr( $str, 0, $palabras[$num][1] ) . $append_str;
+    }
+    unset( $palabras, $num );
+    return trim( $str );
+}
+
+/**
+ * Cut string ok
+ * @param  [type] $cadena [description]
+ * @param  [type] $limite [description]
+ * @param  string $corte  [description]
+ * @param  string $pad    [description]
+ * @return [type]         [description]
+ */
+function limit_string($cadena, $limite, $corte=" ", $pad="...")
+{
+    if(strlen($cadena) <= $limite)
+        return $cadena;
+    if(false !== ($breakpoint = strpos($cadena, $corte, $limite))) {
+        if($breakpoint < strlen($cadena) - 1) {
+            $cadena = substr($cadena, 0, $breakpoint) . $pad;
+        }
+    }
+    return $cadena;
+
+}
