@@ -36,6 +36,13 @@
 	padding: 20px;
 	margin: 1px;
 	overflow: hidden;
+	h3{
+		color: $brand-second;
+		font-weight: 400;
+	}
+	p{
+		color: gray;
+	}
 }
 .card-product-image{
 	height: 238px;

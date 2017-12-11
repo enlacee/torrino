@@ -13,9 +13,9 @@ $theExcerpt = get_the_excerpt($post->ID);
 	<div class="layer-image" style="<?php echo $theThumbnail; ?>"></div>
 	<div class="layer-apha"></div>
 	<div class="d-block title">
-		<h1 class="color-text-blue"><?php the_title(); ?><span class="line"></span></h1>
+		<h1 class="text-uppercase"><?php the_title(); ?><span class="line"></span></h1>
 		<?php if (!empty($theExcerpt)) : ?>
-			<p class="d-block"><?php echo $theExcerpt; ?></p>
+			<p class="d-block mx-3"><?php echo $theExcerpt; ?></p>
 		<?php endif; ?>
 	</div>
 </div>

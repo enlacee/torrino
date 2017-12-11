@@ -1,3 +1,19 @@
+body{
+	span.line{
+		border-top:0.09375em solid white;
+		display: block;
+		width: 57%;
+		margin: 0 auto;
+	}
+}
+body.page{
+	span.line{
+		width: 30%;
+	}
+}
+
+
+
 .subtitle-bg{
 	color: white;
 	min-height: 14em;
@@ -7,12 +23,6 @@
 		h1{
 			display: inline-block;
 			font-weight: bold;
-		}
-		span.line{
-			border-top:0.09375em solid white;
-			display: block;
-			width: 57%;
-			margin: 0 auto;
 		}
 	}
 	.layer-apha, .layer-image{

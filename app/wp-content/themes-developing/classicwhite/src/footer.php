@@ -1,4 +1,4 @@
-	<footer class="footer container-fluid no-gutters">
+	<footer id="contacto" class="footer container-fluid no-gutters">
 		<div class="">
 
 			<!-- <div class="d-flex justify-content-center"> -->

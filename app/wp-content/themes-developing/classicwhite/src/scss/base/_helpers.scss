@@ -2,22 +2,11 @@
  * Classes to help you in your work
  */
 
-// text
-.upper{
-  text-transform: uppercase !important;
-}
-.bold{
-	font-weight: bold !important;
-}
-.bolder{
-	font-weight: bolder;
-}
-
-// font sizes text: from 12 to 18
+// font sizes text: from 12px to 20px represent like em
 @for $i from 0 through 6 {
-  .fz-#{$i + 12} {
-    font-size: $i + 12px !important;
-  }
+	.fz-#{$i + 12} {
+		font-size: ($i+12)*0.0625em !important;
+	}
 }
 
 // others
