@@ -1,0 +1,40 @@
+.our-products{
+	.content-box{
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	button{
+		margin-bottom: 0.15em;
+	}
+	button.active{
+		// background-color: #00347F;
+		// color: white;
+		color: white;
+		background-color: $brand-second;
+		background-image: none;
+		border-color: #006EA9;
+	}
+
+	a.card-product-store{
+		display: block;
+		float: left;
+		margin-right: 0.34em;
+		margin-bottom:  1.8em;
+		width: 242px;
+		height: 320px;
+		overflow: hidden;
+		div{
+			border: 1px solid;
+			padding: 0.2em 0.2em 0.9em 0.2em;
+			height: 100%;
+			// background-color: #f7f7f7;
+		}
+		img{
+			width: 100%;
+
+		}
+
+	}
+
+}

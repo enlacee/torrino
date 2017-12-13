@@ -26,7 +26,7 @@ if ( $queried_object ) {
 	}
 }
 ?>
-<?php if (is_array($posts) && count($posts) > 0):  ?>
+<?php if (is_array($posts) && count($posts) > 0) :  ?>
 	<section class="section-home-products">
 		<div class="container">
 			<div class="d-flex justify-content-center mt-4 mb-2">
