@@ -3,12 +3,17 @@ body{
 		border-top:0.09375em solid white;
 		display: block;
 		width: 57%;
-		margin: 0 auto;
+		margin: 0.19em auto;
 	}
 }
-body.page{
+body.page-template-default{
 	span.line{
 		width: 30%;
+	}
+}
+body.page-template-template-demo2, body.page-template-template-blog{
+	span.line{
+		width: 100%;
 	}
 }
 
@@ -20,7 +25,7 @@ body.page{
 	.title{
 		z-index: 6;
 		text-align: center;
-		h1{
+		h1, h2, h3{
 			display: inline-block;
 			font-weight: bold;
 		}

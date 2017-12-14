@@ -28,14 +28,14 @@ $nav-top-h: 45px;
 		}
 		li a {
 			font-size: 1.3em;
-			// font-weight: bold;
+			font-weight: bold;
 			padding: 0 0.1em;
 			margin: 0.3em;
 			text-transform: uppercase;
 		}
 		li.active a{
 			// border-bottom: 0.10em solid black;
-			font-weight: bold;
+			text-decoration: underline;
 		}
 	}
 }
