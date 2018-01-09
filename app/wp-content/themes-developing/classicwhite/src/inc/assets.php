@@ -64,8 +64,9 @@ function theme_update_script_vars($script_vars = array())
 
     // Non-destructively merge script variables if a particular condition is met (e.g. `is_archive()` or whatever); useful for managing many different kinds of script variables
     return array_merge($script_vars, array(
-        'baseUrl' => get_bloginfo('url'),
-        'ajaxUrl' => admin_url('admin-ajax.php')
+        'baseUrl'	=> get_bloginfo('url'),
+        'ajaxUrl'	=> admin_url('admin-ajax.php'),
+        'facebookId'=> get_option( 'facebook_id')
     ));
 }
 

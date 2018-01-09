@@ -8,7 +8,7 @@
 	<!-- body -->
 	<main class="home">
 		<section class="section-home-baners">
-			<div class="container">
+			<div class="container_">
 				<?php echo do_shortcode( '[rev_slider alias="thehome"]' ); ?>
 			</div>
 		</section>

@@ -1,8 +1,7 @@
 	<footer id="contacto" class="footer container-fluid no-gutters">
 		<div class="">
-
-			<!-- <div class="d-flex justify-content-center"> -->
-			<div class="container" style="/*min-height:60vh;background-color: orange*/">
+<!--
+			<div class="container">
 				<div class="row footer__head">
 					<div class="col-12 w-75_ text-center mt-5">
 						<h2>!ENCUÉNTRANOS E EL WHAT'S UP!</h2>
@@ -23,7 +22,12 @@
 					</div>
 				</div>
 			</div>
-
+-->
+			<div class="container-fluid container-whatsapp">
+				<a href="https://api.whatsapp.com/send?phone=51978412711" target="_blank">
+					<img class="w-100" src="<?php echo get_stylesheet_directory_uri() . '/img/whatsapp-pedidos.jpg' ?>"" alt="whatsapp pedidos">
+				</a>
+			</div>
 			<div class="footer__footer" style="/*min-height: 40vh;*/">
 				<div class="container">
 					<div class="row">
@@ -83,6 +87,7 @@
 						</div>
 					</div>
 				</div>
+				<a href="#all" class="to-top scroll-to mr-3"><span class="icon-circle-up"></span></span></a>
 			</div>
 		</div>
 	</footer>

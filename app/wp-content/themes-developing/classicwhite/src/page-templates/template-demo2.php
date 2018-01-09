@@ -86,9 +86,32 @@ get_header(); ?>
 							</div>
 						</div>
 
-						<div class="row no-gutters">
-							<!-- red social share -->
+						<!-- red social share -->
+						<div class="row no-gutters" style="min-height: 30px;">
+							<div class="fb-like"
+								data-href="<?php echo get_the_permalink($post); ?>"
+								data-layout="button_count"
+								data-action="like",
+								data-size="small"
+								data-show-faces="false"
+								data-share="true">
+							</div>
+							<div class="twit" style="
+								display: inline-block;
+								margin: 0;
+								/*position: absolute;*/
+								padding-left: 0.23em;
+								padding-top: 0.09em;">
+								<?php
+									$textTwit = rawurlencode("Lo ultimo de " . get_bloginfo() . " : " . get_the_title($post));
+									$urlTwit = rawurlencode(wp_get_shortlink($post->ID));
+									$stringTwURL = "https://twitter.com/intent/tweet?text={$textTwit}&tw_p=tweetbutton&url={$urlTwit}";
+								?>
+								<a class="twitter-share-button" href="<?php echo $stringTwURL; ?>"></a>
+							</div>
 						</div>
+						<hr>
+
 						<div class="row no-gutters">
 							<div class="col-12 mb-4">
 								<?php

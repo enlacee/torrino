@@ -77,6 +77,10 @@
 	}
 }
 
+.container-whatsapp{
+	padding: 0;
+	margin: 0;
+}
 .footer{
 	margin: 4.8em 0 0 0;
 	padding: 0;
@@ -101,7 +105,7 @@
 		}
 	}
 	&__footer{
-		background-color: black;
+		background-color: #e4332b;
 		color: white;
 		padding: 2.8em 0em 2.8em 7.5em;
 		@include maxw(xs){
@@ -130,6 +134,17 @@
 					font-size: 0.7em;
 				}
 			}
+		}
+		.to-top {
+			position: absolute;
+			bottom:0;
+			right: 0;
+			font-size: 3.4em;
+			color: rgba(255, 255, 255, 0.2);
+		}
+		.to-top:hover{
+			color: rgba(255, 255, 255, 0.4);
+			border-color: rgba(255, 255, 255, 0.4);
 		}
 	}
 }
