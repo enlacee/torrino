@@ -2,7 +2,8 @@
 
 // ==== MAIN core ==== //
 jQuery( document ).ready( function() {
-	console.log( 'dom ready' );
+
+	var $containerBlog = jQuery( 'body.page-template-template-demo2' );
 
 	// slick
 	jQuery( '.regular' ).slick({
@@ -27,42 +28,37 @@ jQuery( document ).ready( function() {
 				}
 			}
 		]
-
 	});
 
-
-
 	// load library js
-	var $containerBlog = jQuery( 'body.page-template-template-demo2' );
-	if ($containerBlog.length === 1 && jsVars.facebookId.length > 0) {
+	if ( $containerBlog.length === 1 && jsVars.facebookId.length > 0 ) {
 
 		// load library js facebook
-		(function(d, s, id) {
-			var js, fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id)) return;
+		( function( d, s, id ) {
+			var js, fjs = d.getElementsByTagName( s )[0];
+			if ( d.getElementById( id ) ) return;
 			js = d.createElement(s); js.id = id;
 			js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.11&appId=' + jsVars.facebookId;
-			fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));
+			fjs.parentNode.insertBefore( js, fjs );
+		}( document, 'script', 'facebook-jssdk' ) );
 
 		// load library twitter
-		window.twttr = (function(d, s, id) {
-			var js, fjs = d.getElementsByTagName(s)[0],
+		window.twttr = ( function(d, s, id ) {
+			var js, fjs = d.getElementsByTagName( s )[0],
 				t = window.twttr || {};
-			if (d.getElementById(id)) return t;
-			js = d.createElement(s);
+			if ( d.getElementById( id ) ) return t;
+			js = d.createElement( s );
 			js.id = id;
-			js.src = "https://platform.twitter.com/widgets.js";
-			fjs.parentNode.insertBefore(js, fjs);
+			js.src = 'https://platform.twitter.com/widgets.js';
+			fjs.parentNode.insertBefore( js, fjs );
 
 			t._e = [];
-			t.ready = function(f) {
-				t._e.push(f);
+			t.ready = function( f ) {
+				t._e.push( f );
 			};
 
 			return t;
-		}(document, "script", "twitter-wjs"));
-
+		}( document, 'script', 'twitter-wjs' ) );
 	}
 
 });
