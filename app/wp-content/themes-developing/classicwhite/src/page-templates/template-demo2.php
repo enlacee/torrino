@@ -31,8 +31,8 @@ get_header(); ?>
 			<?php get_template_part( 'template-parts/header-page' ); ?>
 		</div>
 		<?php if (is_array($posts) && count($posts) > 0) : ?>
-			<div class="row no-gutters">
-				<div class="col-4 text-center no-gutters sidebar-left">
+			<div class="row no-gutters the-post-flex">
+				<div class="col-lg-4 text-center no-gutters sidebar-left the-post-flex__item1">
 					<h2 class="h3 m-3"><?php _e('POST RECIENTES', 'classicwhite-theme'); ?></h2>
 					<?php $slicePost = array_slice($posts, 1, 5); ?>
 					<?php foreach($slicePost as $post) : ?>
@@ -58,14 +58,14 @@ get_header(); ?>
 						</div>
 					<?php endforeach; ?>
 				</div>
-				<div class="col-8 no-gutters main-content">
+				<div class="col-lg-8 no-gutters main-content the-post-flex__item2">
 					<div class="frame-padding-box border-black">
 						<?php $post = $posts[0]; ?>
 						<div class="row">
-							<div class="col-9">
+							<div class="col-md-9 col-xs-12">
 								<h2><a href="<?php echo get_the_permalink($post); ?>"><?php echo get_the_title($post); ?></a></h2>
 							</div>
-							<div class="col-3 text-right">
+							<div class="col-md-3 col-xs-12 text-right">
 								<?php _e('Fecha', 'classicwhite-theme'); ?>: <?php echo get_the_date( 'd/m/Y', $post); ?>
 							</div>
 						</div>
@@ -87,7 +87,7 @@ get_header(); ?>
 						</div>
 
 						<!-- red social share -->
-						<div class="row no-gutters" style="min-height: 30px;">
+						<div class="row no-gutters social-share" style="min-height: 30px;">
 							<div class="fb-like"
 								data-href="<?php echo get_the_permalink($post); ?>"
 								data-layout="button_count"

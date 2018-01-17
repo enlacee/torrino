@@ -37,35 +37,35 @@ function cw_menuIsActive($postObject, $postID){
 				<ul>
 					<?php if (!empty($rrssFB)) : ?>
 						<li>
-							<a href="<?php echo $rrssFB ?>">
+							<a target="_blank" href="<?php echo $rrssFB ?>">
 								<i class="icon-facebook is-md"></i>
 							</a>
 						</li>
 					<?php endif; ?>
 					<?php if (!empty($rrssTW)) : ?>
 						<li>
-							<a href="<?php echo $rrssTW ?>">
+							<a target="_blank" href="<?php echo $rrssTW ?>">
 								<i class="icon-twitter is-md"></i>
 							</a>
 						</li>
 					<?php endif; ?>
 					<?php if (!empty($rrssPT)) : ?>
 						<li>
-							<a href="<?php echo $rrssPT ?>">
+							<a target="_blank" href="<?php echo $rrssPT ?>">
 								<i class="icon-instagram is-md"></i>
 							</a>
 						</li>
 					<?php endif; ?>
 					<?php if (!empty($rrssYT)) : ?>
 						<li>
-							<a href="<?php echo $rrssYT ?>">
+							<a target="_blank" href="<?php echo $rrssYT ?>">
 								<i class="icon-youtube is-md"></i>
 							</a>
 						</li>
 					<?php endif; ?>
 					<?php if (!empty($rrssLK)) : ?>
 						<li>
-							<a href="<?php echo $rrssLK ?>">
+							<a target="_blank" href="<?php echo $rrssLK ?>">
 								<i class="icon-linkedin is-md"></i>
 							</a>
 						</li>

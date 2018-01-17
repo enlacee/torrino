@@ -58,16 +58,16 @@ function prefix_customizer_register( $wp_customize ) {
 	$wp_customize->add_panel( 'panel_id', array(
 		'priority' => 10,
 		'capability' => 'edit_theme_options',
-		'theme_supports' => '',
+		// 'theme_supports' => '',
 		'title' => __( 'Redes Sociales', 'classicwhite-theme' ),
-		'description' => __( 'Description of what this panel does.', 'classicwhite-theme' ),
+		// 'description' => __( 'Description of what this panel does.', 'classicwhite-theme' ),
 	) );
 
 	$wp_customize->add_section( 'section_id', array(
 		'priority' => 10,
 		'capability' => 'edit_theme_options',
 		'theme_supports' => '',
-		'title' => __( 'URLS', 'classicwhite-theme' ),
+		'title' => __( 'Opciones', 'classicwhite-theme' ),
 		'description' => '',
 		'panel' => 'panel_id',
 	) );
@@ -146,6 +146,23 @@ function prefix_customizer_register( $wp_customize ) {
 		'section' => 'section_id',
 		'label' => __( 'URL linkedin', 'classicwhite-theme' ),
 		'description' => '',
+	) );
+
+	// linkedin
+	$wp_customize->add_setting( 'url_field_whatsapp', array(
+		'default' => '',
+		'type' => 'theme_mod',
+		'capability' => 'edit_theme_options',
+		'transport' => '',
+		'sanitize_callback' => 'stripslashes_from_strings_only',
+	) );
+	$wp_customize->add_control( 'url_field_whatsapp', array(
+		'type' => 'number',
+		'priority' => 10,
+		'section' => 'section_id',
+		'label' => __( '# WhatsApp', 'classicwhite-theme' ),
+		'description' => __( '( Perú [51] ) Ingrese su numero celular ejemplo: 51977412712', 'classicwhite-theme' ),
+
 	) );
 
 }

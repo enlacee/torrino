@@ -23,11 +23,14 @@
 				</div>
 			</div>
 -->
-			<div class="container-fluid container-whatsapp">
-				<a href="https://api.whatsapp.com/send?phone=51978412711" target="_blank">
-					<img class="w-100" src="<?php echo get_stylesheet_directory_uri() . '/img/whatsapp-pedidos.jpg' ?>"" alt="whatsapp pedidos">
-				</a>
-			</div>
+			<?php $numberWhatsapp = get_theme_mod( 'url_field_whatsapp' ); ?>
+			<?php if (is_numeric($numberWhatsapp)) : ?>
+				<div class="container-fluid container-whatsapp">
+					<a href="https://api.whatsapp.com/send?phone=<?php echo $numberWhatsapp; ?>" target="_blank">
+						<img class="w-100" src="<?php echo get_stylesheet_directory_uri() . '/img/whatsapp-pedidos.jpg' ?>"" alt="whatsapp pedidos">
+					</a>
+				</div>
+			<?php endif;?>
 			<div class="footer__footer" style="/*min-height: 40vh;*/">
 				<div class="container">
 					<div class="row">
@@ -58,27 +61,27 @@
 							<ul>
 								<li class="d-flex justify-content-left flex-wrap">
 									<?php if (!empty($rrssFB)) : ?>
-										<a href="<?php echo $rrssFB ?>" class="d-flex justify-content-center align-items-center">
+										<a target="_blank" href="<?php echo $rrssFB ?>" class="d-flex justify-content-center align-items-center">
 											<i class="icon-facebook is-lg"></i>
 										</a>
 									<?php endif; ?>
 									<?php if (!empty($rrssTW)) : ?>
-										<a href="<?php echo $rrssTW ?>" class="d-flex justify-content-center align-items-center">
+										<a target="_blank" href="<?php echo $rrssTW ?>" class="d-flex justify-content-center align-items-center">
 											<i class="icon-twitter is-lg"></i>
 										</a>
 									<?php endif; ?>
 									<?php if (!empty($rrssPT)) : ?>
-										<a href="<?php echo $rrssPT ?>" class="d-flex justify-content-center align-items-center">
+										<a target="_blank" href="<?php echo $rrssPT ?>" class="d-flex justify-content-center align-items-center">
 											<i class="icon-instagram is-lg"></i>
 										</a>
 									<?php endif; ?>
 									<?php if (!empty($rrssYT)) : ?>
-										<a href="<?php echo $rrssYT ?>" class="d-flex justify-content-center align-items-center">
+										<a target="_blank" href="<?php echo $rrssYT ?>" class="d-flex justify-content-center align-items-center">
 											<i class="icon-youtube is-lg"></i>
 										</a>
 									<?php endif; ?>
 									<?php if (!empty($rrssLK)) : ?>
-										<a href="<?php echo $rrssLK ?>" class="d-flex justify-content-center align-items-center">
+										<a target="_blank" href="<?php echo $rrssLK ?>" class="d-flex justify-content-center align-items-center">
 											<i class="icon-linkedin is-lg"></i>
 										</a>
 									<?php endif; ?>
