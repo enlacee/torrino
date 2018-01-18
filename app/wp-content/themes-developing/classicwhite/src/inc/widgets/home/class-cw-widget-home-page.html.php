@@ -30,7 +30,7 @@ if ( $queried_object ) {
 	<section class="section-home-pages">
 		<div class="container ">
 			<div class="d-flex justify-content-center">
-				<div class="w-75 text-center mt-4 mb-5">
+				<div class="h2-content-title w-75_ text-center _mt-4 mb-5_">
 					<?php echo $title; ?>
 				</div>
 			</div>

@@ -7,6 +7,9 @@
 }
 
 .section-home{
+	&-pages{
+		//
+	}
 	&-baners{
 		.container{
 			height: auto;
@@ -24,6 +27,18 @@
 					font-size: 1rem;
 				}
 			}
+		}
+	}
+}
+.h2-content-title{
+	margin-top: 1.5rem;
+	margin-bottom: 3rem;
+	width: 75%;
+	@include maxw(sm){
+		width: 100%;
+		margin-bottom:0;
+		h2{
+			font-size: 1.3em;
 		}
 	}
 }
